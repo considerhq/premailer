@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/considerhq/css_parser.git
-  revision: 57647747cb8b9eb517b0e70949b3e23b777645f5
+  revision: e9f40bb5a2c5c05d2f9ee4fa389ba4b9ac87eeeb
   specs:
     css_parser (1.6.0)
       addressable
@@ -37,7 +37,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     nokogumbo (1.4.13)
       nokogiri
-    public_suffix (3.0.1)
+    public_suffix (3.0.2)
     rake (12.2.1)
     redcarpet (3.4.0)
     safe_yaml (1.0.4)
