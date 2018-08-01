@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/premailer/css_parser.git
-  revision: 6fc4fc316ed411082ae3733f96b796b4ab27528b
+  remote: https://github.com/considerhq/css_parser.git
+  revision: 57647747cb8b9eb517b0e70949b3e23b777645f5
   specs:
     css_parser (1.6.0)
       addressable
@@ -10,7 +10,6 @@ PATH
   specs:
     premailer (1.11.1)
       addressable
-      css_parser (>= 1.6.0)
       htmlentities (>= 4.0.0)
 
 GEM
@@ -75,4 +74,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
