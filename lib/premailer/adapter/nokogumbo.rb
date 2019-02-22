@@ -231,6 +231,8 @@ class Premailer
           ::Nokogiri::HTML5(thing)
         end
 
+        doc.xpath(".//link|.//meta").each(&:remove)
+
         # Fix for removing any CDATA tags from both style and script tags inserted per
         # https://github.com/sparklemotion/nokogiri/issues/311 and
         # https://github.com/premailer/premailer/issues/199
