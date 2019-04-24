@@ -108,6 +108,13 @@ END_HTML
     end
   end
 
+  def test_boolean_xpath_as_css_for_nokogumbo
+    html = '<style>// .orange { color:red }</style><td style="background-color: #FFF;">hey</td>'
+    premailer = Premailer.new(html, {:with_html_string => true, :adapter => :nokogumbo, :css_to_attributes => true})
+    premailer.to_inline_css
+    assert_equal 'hey', premailer.processed_doc.text
+  end
+
   def test_avoid_changing_css_to_attributes
     [:nokogiri, :nokogiri_fast, :nokogumbo].each do |adapter|
       html = '<td style="background-color: #FFF;"></td>'
