@@ -40,7 +40,13 @@ class Premailer
               # than one element.  Added to work around dodgy generated code.
               selector.gsub!(/\A\#([\w_\-]+)\Z/, '*[@id=\1]')
 
-              doc.search(selector).each do |el|
+              search_results = doc.search(selector)
+              if search_results == true || search_results == false
+                $stderr.puts "CSS query returned boolean with selector: #{selector} - possibly due to xpath interpretation"
+                next
+              end
+
+              search_results.each do |el|
                 if el.elem? and (el.name != 'head' and el.parent.name != 'head')
                   # Add a style attribute or append to the existing one
                   block = "[SPEC=#{specificity}[#{declaration}]]"
